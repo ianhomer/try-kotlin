@@ -29,6 +29,8 @@ public class SongTest {
   @Test
   public void testSong() {
     assertEquals(new Song("name"), new Song("name"));
+    assertEquals(new Song("name"), new Song("name").copy("name"));
+    assertEquals(new Song("name").hashCode(), new Song("name").hashCode());
     assertEquals("Song(name=name)", new Song("name").toString());
     assertEquals("name", new Song("name").getName());
   }
