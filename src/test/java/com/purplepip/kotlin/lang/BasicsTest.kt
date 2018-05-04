@@ -87,11 +87,12 @@ class VariablesTest {
     assertNull(getStringLength(Object()))
   }
 
+  private val fruits = listOf("apple", "banana", "kiwifruit")
+
   @Test
   fun `for loop`() {
-    val items = listOf("apple", "banana", "kiwifruit")
-    for (item in items) {
-      // Something
+    for (item in fruits) {
+      // Do something
     }
   }
 
@@ -99,7 +100,7 @@ class VariablesTest {
       when (obj) {
         1          -> "One"
         "Hello"    -> "Greeting"
-        is Long    -> "Long"
+        is Int    -> "int"
         !is String -> "Not a string"
         else       -> "Unknown"
       }
@@ -108,6 +109,36 @@ class VariablesTest {
   fun `try when`() {
     assertEquals("One", describe(1))
     assertEquals("Greeting", describe("Hello"))
+  }
+
+  @Test
+  fun `try ranges`() {
+    val x = 10
+    val y = 9
+    assertTrue(x in 1..y+1)
+
+    for (a in 2..5) {
+      assertEquals("int", describe(a))
+    }
+    for (b in 1..10 step 2) {
+      // Do something
+    }
+    for (c in 9 downTo 0 step 3) {
+      // Do something
+    }
+  }
+
+  @Test
+  fun `try collections`() {
+    when {
+      "orange" in fruits -> println("juicy")
+      "apple" in fruits -> println("apple is fine too")
+    }
+  }
+
+  @Test
+  fun `no new`() {
+    val o = Object()
   }
 
 }
