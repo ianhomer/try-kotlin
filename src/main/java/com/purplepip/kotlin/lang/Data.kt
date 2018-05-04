@@ -13,9 +13,6 @@
  * limitations under the License.
  */
 
-package com.purplepip.kotlin.simple
+package com.purplepip.kotlin.lang
 
-fun main(args: Array<String>) {
-  println("Hello")
-}
-
+data class Data(val name: String)

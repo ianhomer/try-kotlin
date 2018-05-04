@@ -13,12 +13,12 @@
  * limitations under the License.
  */
 
-package com.purplepip.java.simple;
+package com.purplepip.java.lang;
 
-public class JSong {
+public class JavaData {
   private String name;
 
-  public JSong(String name) {
+  public JavaData(String name) {
     this.name = name;
   }
 

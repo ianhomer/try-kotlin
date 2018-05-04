@@ -13,6 +13,15 @@
  * limitations under the License.
  */
 
-package com.purplepip.kotlin.simple
+package com.purplepip.java.lang;
 
-data class Song(val name: String)
+import lombok.Data;
+
+@Data
+public class LombokData {
+  private String name;
+
+  public LombokData(String name) {
+    this.name = name;
+  }
+}

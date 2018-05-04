@@ -13,13 +13,14 @@
  * limitations under the License.
  */
 
-package com.purplepip.kotlin.simple;
+package com.purplepip.kotlin.lang
 
-import org.junit.Test;
+import org.junit.Test
+import kotlin.test.assertEquals
 
-public class HelloTest {
+class DataTest {
   @Test
-  public void testJavaSong() {
-    HelloKt.main(new String[] {});
+  fun `given data then get name`() {
+    assertEquals("name", Data("name").name);
   }
 }

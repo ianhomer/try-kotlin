@@ -13,25 +13,31 @@
  * limitations under the License.
  */
 
-package com.purplepip.kotlin.simple;
+package com.purplepip.java.lang;
 
 import static org.junit.Assert.assertEquals;
 
-import com.purplepip.java.simple.JSong;
+import com.purplepip.kotlin.lang.Data;
+import org.junit.Assert;
 import org.junit.Test;
 
-public class SongTest {
+public class JavaDataTest {
   @Test
   public void testJavaSong() {
-    assertEquals("name", new JSong("name").getName());
+    assertEquals("name", new JavaData("name").getName());
+  }
+
+  @Test
+  public void testLombokSong() {
+    assertEquals("name", new LombokData("name").getName());
   }
 
   @Test
   public void testSong() {
-    assertEquals(new Song("name"), new Song("name"));
-    assertEquals(new Song("name"), new Song("name").copy("name"));
-    assertEquals(new Song("name").hashCode(), new Song("name").hashCode());
-    assertEquals("Song(name=name)", new Song("name").toString());
-    assertEquals("name", new Song("name").getName());
+    Assert.assertEquals(new Data("name"), new Data("name"));
+    assertEquals(new Data("name"), new Data("name").copy("name"));
+    assertEquals(new Data("name").hashCode(), new Data("name").hashCode());
+    assertEquals("Data(name=name)", new Data("name").toString());
+    assertEquals("name", new Data("name").getName());
   }
 }
