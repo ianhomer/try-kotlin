@@ -17,7 +17,7 @@ package com.purplepip.kotlin.simple;
 
 import static org.junit.Assert.assertEquals;
 
-import com.purplepip.kotlin.java.JSong;
+import com.purplepip.java.simple.JSong;
 import org.junit.Test;
 
 public class SongTest {

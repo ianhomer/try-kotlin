@@ -13,7 +13,7 @@
  * limitations under the License.
  */
 
-package com.purplepip.kotlin.java;
+package com.purplepip.java.simple;
 
 public class JSong {
   private String name;
