@@ -47,7 +47,7 @@
           </execution>
         </executions>
         <configuration>
-          <mainClass>com.purplepip.kotlin.simple.Hello</mainClass>
+          <mainClass>com.purplepip.kotlin.simple.HelloKt</mainClass>
         </configuration>
       </plugin>
       <plugin>
