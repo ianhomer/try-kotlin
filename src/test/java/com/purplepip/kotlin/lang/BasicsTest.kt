@@ -16,6 +16,7 @@
 package com.purplepip.kotlin.lang
 
 import org.junit.Test
+import java.time.LocalDateTime
 import kotlin.test.assertEquals
 import kotlin.test.assertNull
 import kotlin.test.assertTrue
@@ -23,21 +24,24 @@ import kotlin.test.assertTrue
 /**
  * Trying out https://kotlinlang.org/docs/reference/basic-syntax.html
  */
+const val a = 1
 class VariablesTest {
   @Test fun `try variables`() {
-    // Read only variable
-
-    val a = 1
+    // Compile time constant
     assertEquals("int", a.javaClass.simpleName)
+
+    // Read only value (evaluated at runtime)
+    val b = LocalDateTime.now().dayOfMonth
+    assertEquals("int", b.javaClass.simpleName)
 
     // val cannot be reassigned
     // NOK : a = 2
 
-    // Mutable variable
+    // (Mutable) variable
 
-    var b = 1
-    b += 2
-    assertEquals(3, b)
+    var c = 1
+    c += 2
+    assertEquals(3, c)
   }
 
   @Test fun `try string templates`() {
@@ -52,8 +56,10 @@ class VariablesTest {
     assertEquals("a was 1, but now is 2", s2)
   }
 
+  // argument cannot be null ...
   private fun identity(a: Any) = a
 
+  // use '?' if argument can be null
   private fun identityOfNullableString(a: String?) = a
 
   @Test fun `try nulls`() {
@@ -65,9 +71,13 @@ class VariablesTest {
     assertNull(identityOfNullableString(null))
   }
 
+  private fun isString(a: Any): Boolean {
+    return a is String
+  }
+
   @Test
   fun `try is`() {
-    assertTrue("a" is String)
+    assertTrue(isString("a"))
   }
 
   private fun getStringLength(obj: Any?): Int? {
@@ -112,7 +122,11 @@ class VariablesTest {
     val y = 9
     assertTrue(x in 1..y+1)
 
-    for (a in 2..5) {
+    for (a in 0..5) {
+      assertEquals("int", describe(a))
+    }
+    // Open range, up to, but excluding, limit
+    for (a in 0 until 6) {
       assertEquals("int", describe(a))
     }
     for (b in 1..10 step 2) {
@@ -134,6 +148,39 @@ class VariablesTest {
     // no "new"
     val o = Object()
     println("Object : $o")
+  }
+
+  @Test fun `try multiline strings`() {
+    println("""
+Multi
+Line
+String
+      """)
+
+    println("""
+      Multi
+      Line
+      String as is
+      """)
+
+    // Trim common indent and remove leading / trailing blank lines
+    println("""
+
+      Multi
+      Line
+      String with trim indent
+
+      """.trimIndent())
+
+    // Trim margin before (and including prefix) and remove leading / trailing blank lines
+    println("""
+
+  #Multi
+      #Line
+      #String with trim margin
+
+      """.trimMargin("#"))
+
   }
 
 }
