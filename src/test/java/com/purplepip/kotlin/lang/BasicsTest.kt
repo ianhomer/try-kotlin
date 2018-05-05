@@ -54,12 +54,13 @@ class VariablesTest {
     assertEquals("a was 1, but now is 2", s2)
   }
 
-  fun identity(a: Any) = a
+  private fun identity(a: Any) = a
 
-  fun identityOfNullableString(a: String?) = a
+  private fun identityOfNullableString(a: String?) = a
 
   @Test
   fun `try nulls`() {
+    assertEquals("s", identity("s"))
     // By default an argument can't be null
     // NOK : identity(null)
 
@@ -87,16 +88,17 @@ class VariablesTest {
     assertNull(getStringLength(Object()))
   }
 
+  // Create a read-only list ...
   private val fruits = listOf("apple", "banana", "kiwifruit")
 
   @Test
   fun `for loop`() {
-    for (item in fruits) {
-      // Do something
+    for (fruit in fruits) {
+      println("Fruit $fruit")
     }
   }
 
-  fun describe(obj: Any): String =
+  private fun describe(obj: Any): String =
       when (obj) {
         1          -> "One"
         "Hello"    -> "Greeting"
@@ -121,10 +123,10 @@ class VariablesTest {
       assertEquals("int", describe(a))
     }
     for (b in 1..10 step 2) {
-      // Do something
+      println("step 2 : $b")
     }
     for (c in 9 downTo 0 step 3) {
-      // Do something
+      println("downTo 0 step 3 : $c")
     }
   }
 
@@ -137,8 +139,10 @@ class VariablesTest {
   }
 
   @Test
-  fun `no new`() {
+  fun `try create object`() {
+    // no "new"
     val o = Object()
+    println("Object : $o")
   }
 
 }
