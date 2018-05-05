@@ -24,8 +24,7 @@ import kotlin.test.assertTrue
  * Trying out https://kotlinlang.org/docs/reference/basic-syntax.html
  */
 class VariablesTest {
-  @Test
-  fun `try variables`() {
+  @Test fun `try variables`() {
     // Read only variable
 
     val a = 1
@@ -41,8 +40,7 @@ class VariablesTest {
     assertEquals(3, b)
   }
 
-  @Test
-  fun `try string templates`() {
+  @Test fun `try string templates`() {
     var a = 1
     // simple name in template:
     val s1 = "a is $a"
@@ -58,8 +56,7 @@ class VariablesTest {
 
   private fun identityOfNullableString(a: String?) = a
 
-  @Test
-  fun `try nulls`() {
+  @Test fun `try nulls`() {
     assertEquals("s", identity("s"))
     // By default an argument can't be null
     // NOK : identity(null)
@@ -82,8 +79,7 @@ class VariablesTest {
     return null
   }
 
-  @Test
-  fun `function with smart cast`() {
+  @Test fun `function with smart cast`() {
     assertEquals(5, getStringLength("abcde"))
     assertNull(getStringLength(Object()))
   }
@@ -91,8 +87,7 @@ class VariablesTest {
   // Create a read-only list ...
   private val fruits = listOf("apple", "banana", "kiwifruit")
 
-  @Test
-  fun `for loop`() {
+  @Test fun `for loop`() {
     for (fruit in fruits) {
       println("Fruit $fruit")
     }
@@ -107,14 +102,12 @@ class VariablesTest {
         else       -> "Unknown"
       }
 
-  @Test
-  fun `try when`() {
+  @Test fun `try when`() {
     assertEquals("One", describe(1))
     assertEquals("Greeting", describe("Hello"))
   }
 
-  @Test
-  fun `try ranges`() {
+  @Test fun `try ranges`() {
     val x = 10
     val y = 9
     assertTrue(x in 1..y+1)
@@ -130,16 +123,14 @@ class VariablesTest {
     }
   }
 
-  @Test
-  fun `try collections`() {
+  @Test fun `try collections`() {
     when {
       "orange" in fruits -> println("juicy")
       "apple" in fruits -> println("apple is fine too")
     }
   }
 
-  @Test
-  fun `try create object`() {
+  @Test fun `try create object`() {
     // no "new"
     val o = Object()
     println("Object : $o")

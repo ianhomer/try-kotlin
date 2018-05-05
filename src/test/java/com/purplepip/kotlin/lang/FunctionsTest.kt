@@ -19,13 +19,11 @@ import org.junit.Test
 import kotlin.test.assertEquals
 
 class FunctionsTest {
-  @Test
-  fun `when add two numbers then sum is OK`() {
+  @Test fun `when add two numbers then sum is OK`() {
     assertEquals(3, sum(1, 2));
   }
 
-  @Test
-  fun `let's try max of`() {
+  @Test fun `let's try max of`() {
     assertEquals(2, maxOf(1, 2));
   }
 }

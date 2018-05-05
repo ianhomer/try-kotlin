@@ -19,8 +19,7 @@ import org.junit.Test
 import kotlin.test.assertEquals
 
 class DataTest {
-  @Test
-  fun `given data then get name`() {
+  @Test fun `given data then get name`() {
     assertEquals("name", Data("name").name);
   }
 }

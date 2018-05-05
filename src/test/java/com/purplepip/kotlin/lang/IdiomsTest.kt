@@ -24,8 +24,7 @@ import kotlin.test.assertTrue
 class IdiomsTest {
   data class Bean(val name: String, val email: String = "")
 
-  @Test
-  fun `try data class`() {
+  @Test fun `try data class`() {
     val bean = Bean("name", "me@my.com")
     assertEquals("name", bean.name)
     assertEquals(Bean("name"), Bean("name"))
@@ -46,8 +45,7 @@ class IdiomsTest {
     assertEquals("me@my.com", email)
   }
 
-  @Test
-  fun `try traversing a map`() {
+  @Test fun `try traversing a map`() {
     // read-only map with mapOf
     val map = mapOf(1 to "x", 2 to "y", -1 to "zz")
 
@@ -57,8 +55,7 @@ class IdiomsTest {
     }
   }
 
-  @Test
-  fun `try lazy`() {
+  @Test fun `try lazy`() {
     var created = false
     val p : String by lazy {
       println("Creating lazy")
@@ -103,8 +100,7 @@ class IdiomsTest {
     return s?.length ?: -1
   }
 
-  @Test
-  fun `try if not null`() {
+  @Test fun `try if not null`() {
     assertEquals(1, getLength("a"))
     assertEquals(0, getLength(""))
     assertEquals(-1, getLength(null))
@@ -119,8 +115,7 @@ class IdiomsTest {
     }
   }
 
-  @Test
-  fun `try when expression`() {
+  @Test fun `try when expression`() {
     assertEquals("one", 1.asWord())
     assertEquals("too high", 9.asWord())
   }
@@ -128,13 +123,11 @@ class IdiomsTest {
   // Single answer functions
   private fun theAnswer() = 42
 
-  @Test
-  fun `try single answer`() {
+  @Test fun `try single answer`() {
     assertEquals(42, theAnswer())
   }
 
-  @Test
-  fun `try with`() {
+  @Test fun `try with`() {
     with(42) {
       assertEquals(42, this)
       if (this == 42) {
