@@ -123,11 +123,11 @@ class VariablesTest {
     assertTrue(x in 1..y+1)
 
     for (a in 0..5) {
-      assertEquals("int", describe(a))
+      // do something
     }
     // Open range, up to, but excluding, limit
     for (a in 0 until 6) {
-      assertEquals("int", describe(a))
+      // do something
     }
     for (b in 1..10 step 2) {
       println("step 2 : $b")

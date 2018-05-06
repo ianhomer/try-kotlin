@@ -15,11 +15,8 @@
 
 package com.purplepip.kotlin.app
 
-import java.util.*
-import java.util.stream.Stream
-
 class Song(val name: String) {
-  private val genres = HashSet<Genre>()
+  private val genres = mutableSetOf<Genre>()
 
   /**
    * Add genre.
@@ -30,8 +27,8 @@ class Song(val name: String) {
     this.genres.add(genre)
   }
 
-  fun genres(): Stream<Genre> {
-    return genres.stream()
+  fun genres(): MutableSet<Genre> {
+    return genres
   }
 }
 
