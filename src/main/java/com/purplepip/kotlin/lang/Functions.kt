@@ -17,4 +17,4 @@ package com.purplepip.kotlin.lang
 
 fun sum(a: Int, b: Int) = a + b
 
-fun maxOf(a: Int, b: Int) = if (a > b) a else b
+fun myMaxOf(a: Int, b: Int) = if (a > b) a else b

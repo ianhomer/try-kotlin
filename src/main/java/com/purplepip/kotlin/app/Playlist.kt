@@ -23,6 +23,7 @@ class Playlist {
    *
    * @param song song to add
    */
+  //@JsName("addSong")
   fun addSong(song: Song) {
     songs.add(song)
   }

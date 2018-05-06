@@ -24,6 +24,6 @@ class FunctionsTest {
   }
 
   @Test fun `let's try max of`() {
-    assertEquals(2, maxOf(1, 2));
+    assertEquals(2, myMaxOf(1, 2));
   }
 }
