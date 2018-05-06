@@ -15,7 +15,8 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
-      'target/js/try-kotlin/try-kotlin.js',
+      'node_modules/kotlin/kotlin.js',
+      './target/js/try-kotlin.js',
       'src/test/js/**/*.test.js'
     ],
 

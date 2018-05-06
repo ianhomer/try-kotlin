@@ -15,13 +15,13 @@
 
 package com.purplepip.kotlin.app
 
-class Song(val name: String, val length: Int) {
+class Song(val name: String, val length: Int = 0) {
   private val genres = mutableSetOf<Genre>()
 
   /**
    * Add genre.
    *
-   * @param genre genres to add
+   * @param genre genre to add
    */
   fun addGenre(genre: Genre) {
     genres.add(genre)

@@ -23,6 +23,6 @@ class SongTest {
   fun `test add genre`() {
     val song = Song("name")
     song.addGenre(Genre.ELECTRONICA)
-    assertEquals(1, song.genres().count())
+    assertEquals(1, song.getGenres().count())
   }
 }

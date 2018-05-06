@@ -79,6 +79,8 @@
         </executions>
         <configuration>
           <jvmTarget>1.8</jvmTarget>
+          <moduleKind>umd</moduleKind>
+          <sourceMap>true</sourceMap>
         </configuration>
       </plugin>
       <plugin>

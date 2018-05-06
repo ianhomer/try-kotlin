@@ -15,23 +15,17 @@
 
 package com.purplepip.kotlin.app
 
-class Playlist {
-  private val songs = mutableListOf<Song>()
+import org.junit.Test
+import kotlin.test.assertEquals
 
-  /**
-   * Add sond.
-   *
-   * @param song song to add
-   */
-  fun addSong(song: Song) {
-    songs.add(song)
-  }
-
-  fun getSongs(): MutableList<Song> {
-    return songs
-  }
-
-  fun getLength(): Int {
-    return songs.sumBy { it.length }
+class PlaylistTest {
+  @Test
+  fun `test create playlist`() {
+    val song1 = Song("song-1", 5)
+    val song2 = Song("song-2", 9)
+    val playlist = Playlist()
+    playlist.addSong(song1)
+    playlist.addSong(song2)
+    assertEquals(14, playlist.getLength())
   }
 }
