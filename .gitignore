@@ -3,6 +3,10 @@
 .idea/workspace.xml
 .idea/sonarlint
 
+# npm
+
+node_modules
+
 # Maven
 
 target/

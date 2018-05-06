@@ -15,20 +15,23 @@
 
 package com.purplepip.kotlin.app
 
-class Song(val name: String, val length: Int) {
-  private val genres = mutableSetOf<Genre>()
+class Playlist {
+  private val songs = mutableListOf<Song>()
 
   /**
    * Add genre.
    *
    * @param genre genres to add
    */
-  fun addGenre(genre: Genre) {
-    genres.add(genre)
+  fun addGenre(song: Song) {
+    songs.add(song)
   }
 
-  fun getGenres(): MutableSet<Genre> {
-    return genres
+  fun getSongs(): MutableList<Song> {
+    return songs
+  }
+
+  fun getLength(): Int {
+    return songs.sumBy { it.length }
   }
 }
-

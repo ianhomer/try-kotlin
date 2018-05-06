@@ -1,0 +1,17 @@
+{
+  "name": "try-kotlin",
+  "version": "0.1.0",
+  "description": "Try Kotlin",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ianhomer/try-kotlin"
+  },
+  "author": "Ian Homer",
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "jasmine-core": "^3.1.0",
+    "karma": "^2.0.2",
+    "karma-chrome-launcher": "^2.2.0",
+    "karma-jasmine": "^1.1.2"
+  }
+}
