@@ -13,19 +13,8 @@
  * limitations under the License.
  */
 
-package com.purplepip.kotlin.app
+package com.purplepip.kotlin.demo
 
-import org.junit.Test
-import kotlin.test.assertEquals
-
-class PlaylistTest {
-  @Test
-  fun `test create playlist`() {
-    val song1 = Song("song-1", 5)
-    val song2 = Song("song-2", 9)
-    val playlist = Playlist()
-    playlist.addSong(song1)
-    playlist.addSong(song2)
-    assertEquals(14, playlist.getLength())
-  }
+enum class Genre {
+  ELECTRONICA, INDIE, JAZZ, FUNK, GRIME, PUNK, RAP
 }

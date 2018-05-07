@@ -13,8 +13,16 @@
  * limitations under the License.
  */
 
-package com.purplepip.kotlin.app
+package com.purplepip.kotlin.demo
 
-enum class Genre {
-  ELECTRONICA, INDIE, JAZZ, FUNK, GRIME, PUNK, RAP
+import org.junit.Test
+import kotlin.test.assertEquals
+
+class SongTest {
+  @Test
+  fun `test add genre`() {
+    val song = Song("name")
+    song.addGenre(Genre.ELECTRONICA)
+    assertEquals(1, song.getGenres().count())
+  }
 }

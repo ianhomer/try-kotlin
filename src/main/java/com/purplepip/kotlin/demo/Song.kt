@@ -13,16 +13,22 @@
  * limitations under the License.
  */
 
-package com.purplepip.kotlin.app
+package com.purplepip.kotlin.demo
 
-import org.junit.Test
-import kotlin.test.assertEquals
+class Song(val name: String, val length: Int = 0) {
+  private val genres = mutableSetOf<Genre>()
 
-class SongTest {
-  @Test
-  fun `test add genre`() {
-    val song = Song("name")
-    song.addGenre(Genre.ELECTRONICA)
-    assertEquals(1, song.getGenres().count())
+  /**
+   * Add genre.
+   *
+   * @param genre genre to add
+   */
+  fun addGenre(genre: Genre) {
+    genres.add(genre)
+  }
+
+  fun getGenres(): MutableSet<Genre> {
+    return genres
   }
 }
+

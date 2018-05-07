@@ -13,22 +13,26 @@
  * limitations under the License.
  */
 
-package com.purplepip.kotlin.app
+package com.purplepip.kotlin.demo
 
-class Song(val name: String, val length: Int = 0) {
-  private val genres = mutableSetOf<Genre>()
+class Playlist {
+  private val songs = mutableListOf<Song>()
 
   /**
-   * Add genre.
+   * Add sond.
    *
-   * @param genre genre to add
+   * @param song song to add
    */
-  fun addGenre(genre: Genre) {
-    genres.add(genre)
+  //@JsName("addSong")
+  fun addSong(song: Song) {
+    songs.add(song)
   }
 
-  fun getGenres(): MutableSet<Genre> {
-    return genres
+  fun getSongs(): MutableList<Song> {
+    return songs
+  }
+
+  fun getLength(): Int {
+    return songs.sumBy { it.length }
   }
 }
-
