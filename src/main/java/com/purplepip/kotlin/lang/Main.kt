@@ -18,4 +18,3 @@ package com.purplepip.kotlin.lang
 fun main(args: Array<String>) {
   println("Hello, from main")
 }
-
