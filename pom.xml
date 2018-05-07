@@ -1,23 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <parent>
+  <!--parent>
     <artifactId>project-parent</artifactId>
     <groupId>com.purplepip</groupId>
     <version>1.0.7</version>
-  </parent>
+  </parent-->
 
   <artifactId>try-kotlin</artifactId>
+  <groupId>com.purplepip</groupId>
   <name>Try Kotlin</name>
   <version>1.0.0-SNAPSHOT</version>
 
   <properties>
-    <jacoco.argLine/>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+
+    <!-- Java version -->
     <java.version>1.8</java.version>
+
+    <jacoco.argLine/>
+    <lombok.version>1.16.20</lombok.version>
     <kotlin.version>1.2.41</kotlin.version>
     <logback.debug>false</logback.debug>
     <try/>
   </properties>
+
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>org.projectlombok</groupId>
+        <artifactId>lombok</artifactId>
+        <version>${lombok.version}</version>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
 
   <dependencies>
     <dependency>
@@ -35,6 +52,11 @@
       <artifactId>kotlin-test-junit</artifactId>
       <version>${kotlin.version}</version>
       <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.projectlombok</groupId>
+      <artifactId>lombok</artifactId>
+      <scope>provided</scope>
     </dependency>
   </dependencies>
 
@@ -86,23 +108,32 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.7.0</version>
         <executions>
           <execution>
-            <id>testCompile</id>
+            <id>default-compile</id>
+            <phase>none</phase>
+          </execution>
+          <execution>
+            <id>default-testCompile</id>
+            <phase>none</phase>
+          </execution>
+          <execution>
+            <id>java-compile</id>
+            <phase>compile</phase>
+            <goals> <goal>compile</goal> </goals>
+          </execution>
+          <execution>
+            <id>java-test-compile</id>
             <phase>test-compile</phase>
-            <goals>
-              <goal>testCompile</goal>
-            </goals>
+            <goals> <goal>testCompile</goal> </goals>
           </execution>
         </executions>
+        <configuration>
+          <source>${java.version}</source>
+          <target>${java.version}</target>
+        </configuration>
       </plugin>
     </plugins>
   </build>
-
-  <repositories>
-    <repository>
-      <id>purplepip-releases</id>
-      <url>https://packagecloud.io/purplepip/releases/maven2</url>
-    </repository>
-  </repositories>
 </project>

@@ -15,13 +15,18 @@
 
 package com.purplepip.java.demo;
 
-import static org.junit.Assert.assertEquals;
+import com.purplepip.kotlin.demo.Playlist;
+import com.purplepip.kotlin.demo.Song;
 
-import org.junit.Test;
+public class App {
+  private Playlist playlist = new Playlist();
 
-public class AppTest {
-  @Test
-  public void testApp() {
-    assertEquals(10, new App().getPlaylist().getLength());
+  public App() {
+    playlist.addSong(new Song("my-song-1", 3));
+    playlist.addSong(new Song("my-song-2", 7));
+  }
+
+  public Playlist getPlaylist() {
+    return playlist;
   }
 }
