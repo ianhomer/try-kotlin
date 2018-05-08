@@ -15,7 +15,8 @@
 
 package com.purplepip.kotlin.js.demo
 
-fun sum(a: Int, b: Int) = a + b
-
-@JsName("product")
-fun product(a: Int, b: Int) = a * b
+class MyBean(val name: String) {
+  fun getNameInUpperCase(): String {
+    return name.toUpperCase()
+  }
+}

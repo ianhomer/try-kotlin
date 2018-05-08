@@ -15,4 +15,4 @@
 
 package com.purplepip.kotlin.js.demo
 
-data class Bean(val name: String)
+data class DataBean(val name: String)
