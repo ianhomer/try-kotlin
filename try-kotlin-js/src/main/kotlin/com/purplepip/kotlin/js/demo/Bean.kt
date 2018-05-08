@@ -13,26 +13,6 @@
  * limitations under the License.
  */
 
-package com.purplepip.kotlin.demo
+package com.purplepip.kotlin.js.demo
 
-class Playlist {
-  private val songs = mutableListOf<Song>()
-
-  /**
-   * Add sond.
-   *
-   * @param song song to add
-   */
-  @JsName("addSong")
-  fun addSong(song: Song) {
-    songs.add(song)
-  }
-
-  fun getSongs(): MutableList<Song> {
-    return songs
-  }
-
-  fun getLength(): Int {
-    return songs.sumBy { it.length }
-  }
-}
+data class Bean(val name: String)

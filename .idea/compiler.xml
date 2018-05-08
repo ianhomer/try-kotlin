@@ -7,10 +7,12 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="try-kotlin" />
+        <module name="try-kotlin-js" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="try-kotlin" target="1.8" />
+      <module name="try-kotlin-js" target="1.5" />
     </bytecodeTargetLevel>
   </component>
 </project>
