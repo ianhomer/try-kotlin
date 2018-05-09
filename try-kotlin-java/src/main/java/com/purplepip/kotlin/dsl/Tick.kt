@@ -16,7 +16,8 @@
 package com.purplepip.kotlin.dsl
 
 enum class Tick {
-  BEAT(TimeUnit.BEAT, 1);
+  BEAT(TimeUnit.BEAT, 1),
+  TWO_BEAT(TimeUnit.BEAT, 2);
 
   constructor(timeUnit: TimeUnit, factor: Int)
 }

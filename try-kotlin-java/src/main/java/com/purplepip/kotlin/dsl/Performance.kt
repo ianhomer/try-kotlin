@@ -17,8 +17,11 @@ package com.purplepip.kotlin.dsl
 
 open class Performance {
   val channels = mutableListOf<Channel>()
+  val sequences = mutableListOf<Sequence>()
 
   constructor(block: PerformanceContext.() -> Unit) {
     PerformanceContext(this).apply(block)
   }
+
+
 }

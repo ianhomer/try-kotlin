@@ -16,6 +16,8 @@
 package com.purplepip.kotlin.dsl
 
 data class Sequence(
+    var channel: Int = 0,
+    var offset: Int = 0,
     var bits: Int = 0,
     var notation: String = "",
     var tick: Tick = Tick.BEAT

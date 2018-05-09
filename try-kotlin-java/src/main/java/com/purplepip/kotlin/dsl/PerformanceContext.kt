@@ -17,18 +17,45 @@ package com.purplepip.kotlin.dsl
 
 class PerformanceContext constructor(performance: Performance) {
   var performance : Performance = performance
+  var channelIndex : Int = 0
+
+  fun channel(channel: Int, instrument: String, init: () -> Unit) : PerformanceContext {
+    return channel(Channel(channel, instrument), init)
+  }
 
   fun channel(channel: Int, init: () -> Unit) : PerformanceContext {
-    performance.channels.add(Channel(channel))
+    return channel(Channel(channel), init)
+  }
+
+  private fun channel(channel: Channel, init: () -> Unit) : PerformanceContext {
+    performance.channels.add(channel)
+    this.channelIndex = channel.index
+    init.invoke()
     return this
   }
 
+  infix fun play(sequence: Sequence) : Sequence {
+    if (sequence.channel == 0) sequence.channel = channelIndex
+    performance.sequences.add(sequence)
+    return sequence
+  }
+
+  infix fun play(bits: Int): Sequence {
+    return play(Sequence(bits = bits))
+  }
+
   infix fun play(notation: String): Sequence {
-    return Sequence(notation = notation)
+    return play(Sequence(notation = notation))
   }
 }
 
 infix fun Sequence.at(value: Tick) : Sequence {
   tick = value
+  return this
+}
+
+// Override +
+operator fun Sequence.plus(value: Int) : Sequence {
+  offset = value
   return this
 }

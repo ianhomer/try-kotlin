@@ -21,6 +21,10 @@ import kotlin.test.assertEquals
 class MyPerformanceTest {
   @Test
   fun `test my performance`() {
-    assertEquals(1, MyPerformance().channels.size);
+    val performance = MyPerformance()
+    assertEquals(2, performance.channels.size)
+    assertEquals(2, performance.sequences.size)
+    assertEquals(Tick.TWO_BEAT, performance.sequences.find { it.channel == 1 }?.tick)
+    assertEquals(1, performance.sequences.find { it.channel == 9 }?.offset)
   }
 }

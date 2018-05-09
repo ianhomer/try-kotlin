@@ -16,5 +16,6 @@
 package com.purplepip.kotlin.dsl
 
 data class Channel(
-  var channel: Int = 0
+  val index: Int = 0,
+  val instrument: String = ""
 )

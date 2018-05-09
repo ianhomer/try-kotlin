@@ -17,6 +17,9 @@ package com.purplepip.kotlin.dsl
 
 class MyPerformance: Performance({
   channel(1) {
-    play("A/q G/8 A/q E") at Tick.BEAT
+    play("A/q G/8 A/q E") at Tick.TWO_BEAT
+  }
+  channel(9, "Power Drums") {
+    play(31) + 1 at Tick.BEAT
   }
 })
