@@ -1,4 +1,4 @@
-var demo = require('../../../../target/js/try-kotlin')
+var demo = require('../../../../target/js/try-kotlin-java')
 var Playlist = demo.com.purplepip.kotlin.demo.Playlist
 
 // Set up aliases for mangled method names
