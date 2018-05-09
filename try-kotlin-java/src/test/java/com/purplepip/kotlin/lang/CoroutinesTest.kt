@@ -13,18 +13,33 @@
  * limitations under the License.
  */
 
-package com.purplepip.kotlin.dsl
+package com.purplepip.kotlin.lang
 
+import kotlinx.coroutines.experimental.async
+import kotlinx.coroutines.experimental.delay
+import kotlinx.coroutines.experimental.launch
 import org.junit.Test
-import kotlin.test.assertEquals
 
-class MyPerformanceTest {
+class CoroutinesTest {
   @Test
-  fun `test my performance`() {
-    val performance = MyPerformance()
-    assertEquals(3, performance.channels.size)
-    assertEquals(4, performance.sequences.size)
-    assertEquals(Tick.HALF_BEAT, performance.sequences.find { it.channel == 1 }?.tick)
-    assertEquals(1, performance.sequences.find { it.channel == 9 }?.offset)
+  fun `test coroutine`() {
+    launch {
+      delay(1000)
+      println("Hello")
+    }
+
+    println("launched")
+    Thread.sleep(2000) // wait for 2 seconds
+    println("Stop")
+  }
+
+  @Test
+  fun `test run in parallel`() {
+    println((1..1_000).map { n ->
+      async {
+        delay(1000)
+        n
+      }
+    })
   }
 }

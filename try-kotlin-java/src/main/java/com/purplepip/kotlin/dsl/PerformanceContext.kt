@@ -34,6 +34,7 @@ class PerformanceContext constructor(performance: Performance) {
     return this
   }
 
+  // infix functions can be called without . and ()
   infix fun play(sequence: Sequence) : Sequence {
     if (sequence.channel == 0) sequence.channel = channelIndex
     performance.sequences.add(sequence)

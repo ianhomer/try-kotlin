@@ -19,7 +19,11 @@ class MyPerformance: Performance({
   channel(1) {
     play("A/q G/8 A/q E") at Tick.HALF_BEAT
   }
+  channel(2) {
+    this play "A B D"
+    play(3)  + 1 at Tick.HALF_BEAT
+  }
   channel(9, "Power Drums") {
-    play(31) + 1 at Tick.BEAT
+    play(15)  + 1 at Tick.BEAT
   }
 })
