@@ -12,6 +12,8 @@
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="try-kotlin" target="1.5" />
+      <module name="try-kotlin-app_main" target="1.8" />
+      <module name="try-kotlin-app_test" target="1.8" />
       <module name="try-kotlin-java" target="1.8" />
       <module name="try-kotlin-js" target="1.5" />
     </bytecodeTargetLevel>
