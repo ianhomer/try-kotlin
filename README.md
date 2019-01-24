@@ -4,7 +4,7 @@ Exercise to help learn and demonstrate features in Kotlin.
 
 # TL;DR
 
-    gradle build    
+    gradle test    
     gradle try-kotlin-app:run 
     
 or 

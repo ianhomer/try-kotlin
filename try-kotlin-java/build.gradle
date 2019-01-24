@@ -8,11 +8,21 @@ buildscript {
     }
 }
 
+plugins {
+    id 'io.franzbecker.gradle-lombok' version '1.14'
+}
+
 apply plugin: 'kotlin'
+
+lombok {
+    version = '1.18.4'
+    sha256 = ""
+}
 
 dependencies {
     compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
-    compile "org.projectlombok:lombok:1.16.20"
+    compileOnly "org.projectlombok:lombok:1.18.4"
     testCompile "org.jetbrains.kotlin:kotlin-test-junit:$kotlin_version"
     testCompile 'org.jetbrains.kotlinx:kotlinx-coroutines-core:0.21'
+    testCompile "junit:junit:4.12"
 }
