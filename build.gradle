@@ -1,0 +1,27 @@
+allprojects {
+    apply plugin: 'maven'
+
+    group = 'com.purplepip'
+    version = '1.0.0-SNAPSHOT'
+}
+
+subprojects {
+    apply plugin: 'java'
+
+    repositories {
+        mavenLocal()
+        maven {
+            url = 'https://packagecloud.io/purplepip/releases/maven2'
+        }
+
+        maven {
+            url = 'http://repo.maven.apache.org/maven2'
+        }
+
+        maven {
+            url = 'http://jcenter.bintray.com'
+        }
+    }
+
+    sourceCompatibility = '1.8'
+}
