@@ -73,7 +73,6 @@
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/try-kotlin-js/pom.xml" />
       </list>
     </option>
   </component>

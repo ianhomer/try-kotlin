@@ -6,11 +6,11 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="try-kotlin-java" />
-        <module name="try-kotlin-js" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="com.purplepip.try-kotlin-java.main" target="1.8" />
+      <module name="com.purplepip.try-kotlin-java.test" target="1.8" />
       <module name="try-kotlin" target="1.5" />
       <module name="try-kotlin-app_main" target="1.8" />
       <module name="try-kotlin-app_test" target="1.8" />
