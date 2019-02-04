@@ -10,6 +10,8 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="com.purplepip.try-kotlin-gradle.main" target="1.8" />
+      <module name="com.purplepip.try-kotlin-gradle.test" target="1.8" />
       <module name="com.purplepip.try-kotlin-java.main" target="1.8" />
       <module name="com.purplepip.try-kotlin-java.test" target="1.8" />
       <module name="try-kotlin" target="1.5" />

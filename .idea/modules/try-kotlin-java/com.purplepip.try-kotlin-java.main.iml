@@ -20,6 +20,9 @@
           <option name="pluginClasspaths">
             <array />
           </option>
+          <option name="errors">
+            <ArgumentParseErrors />
+          </option>
         </compilerArguments>
       </configuration>
     </facet>
@@ -29,6 +32,8 @@
     <exclude-output />
     <content url="file://$MODULE_DIR$/../../../try-kotlin-java/src/main">
       <sourceFolder url="file://$MODULE_DIR$/../../../try-kotlin-java/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../try-kotlin-java/src/main/kotlin" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../try-kotlin-java/src/main/resources" type="java-resource" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

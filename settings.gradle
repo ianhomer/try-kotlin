@@ -4,4 +4,4 @@
 
 rootProject.name = 'try-kotlin'
 
-include 'try-kotlin-java'
+include 'try-kotlin-java', 'try-kotlin-gradle'
