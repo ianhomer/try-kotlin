@@ -9,17 +9,17 @@
   "author": "Ian Homer",
   "license": "Apache-2.0",
   "devDependencies": {
-    "browserify": "^16.2.0",
-    "jasmine": "^3.1.0",
-    "jasmine-core": "^3.1.0",
-    "karma": "^2.0.2",
-    "karma-browserify": "^5.2.0",
-    "karma-chrome-launcher": "^2.2.0",
-    "karma-jasmine": "^1.1.2",
-    "minimist": ">=1.2.2",
-    "watchify": "^3.11.0"
+    "browserify": "^16.5.0",
+    "jasmine": "^3.5.0",
+    "jasmine-core": "^3.5.0",
+    "karma": "^4.4.1",
+    "karma-browserify": "^7.0.0",
+    "karma-chrome-launcher": "^3.1.0",
+    "karma-jasmine": "^3.1.1",
+    "minimist": ">=1.2.5",
+    "watchify": "^3.11.1"
   },
   "dependencies": {
-    "kotlin": "^1.2.41"
+    "kotlin": "^1.3.70"
   }
 }
