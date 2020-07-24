@@ -2,13 +2,11 @@
 
 Exercise to help learn and demonstrate features in Kotlin.
 
-# TL;DR
+# tl;dr
 
-    gradle test    
-    gradle try-kotlin-app:run 
-    
-or 
+    gradle test
+    gradle try-kotlin-app:run
 
-    mvn install    
+or
 
-
+    mvn install

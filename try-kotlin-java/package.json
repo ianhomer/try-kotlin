@@ -6,6 +6,9 @@
     "type": "git",
     "url": "https://github.com/ianhomer/try-kotlin"
   },
+  "scripts": {
+    "update": "npx npm-check-updates -u"
+  },
   "author": "Ian Homer",
   "license": "Apache-2.0",
   "devDependencies": {
@@ -16,6 +19,7 @@
     "karma-browserify": "^5.2.0",
     "karma-chrome-launcher": "^2.2.0",
     "karma-jasmine": "^1.1.2",
+    "lodash": "^4.17.19",
     "watchify": "^3.11.0"
   },
   "dependencies": {

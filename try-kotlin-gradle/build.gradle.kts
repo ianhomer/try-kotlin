@@ -14,5 +14,6 @@ tasks.register("hello") {
     doLast {
         println("hello")
         println(Strings.padEnd("A", 10, '.'))
+
     }
 }
