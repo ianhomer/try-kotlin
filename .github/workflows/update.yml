@@ -22,7 +22,8 @@ jobs:
         npm install
         npm run update
         npm install
-        npm run build
+        cd ..
+        ./gradlew test
       env:
         CI: false
     - name: commit any updates
