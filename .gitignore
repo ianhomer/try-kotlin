@@ -2,6 +2,12 @@
 
 .idea
 
+# vi
+.project
+.settings
+.classpath
+bin
+
 # npm
 
 node_modules
