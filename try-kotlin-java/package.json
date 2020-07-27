@@ -13,7 +13,7 @@
   "license": "Apache-2.0",
   "devDependencies": {
     "browserify": "^16.5.1",
-    "jasmine": "^3.6.0",
+    "jasmine": "^3.6.1",
     "jasmine-core": "^3.6.0",
     "karma": "^5.1.0",
     "karma-browserify": "^7.0.0",
