@@ -12,7 +12,7 @@
   "author": "Ian Homer",
   "license": "Apache-2.0",
   "devDependencies": {
-    "browserify": "^16.5.2",
+    "browserify": "^17.0.0",
     "jasmine": "^3.6.1",
     "jasmine-core": "^3.6.0",
     "karma": "^5.2.3",
