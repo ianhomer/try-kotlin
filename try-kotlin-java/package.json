@@ -24,6 +24,6 @@
     "watchify": "^3.11.1"
   },
   "dependencies": {
-    "kotlin": "^1.4.10"
+    "kotlin": "^1.4.20"
   }
 }
