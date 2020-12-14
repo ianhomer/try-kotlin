@@ -16,7 +16,7 @@
     "jasmine": "^3.6.3",
     "jasmine-core": "^3.6.0",
     "karma": "^5.2.3",
-    "karma-browserify": "^7.0.0",
+    "karma-browserify": "^8.0.0",
     "karma-chrome-launcher": "^3.1.0",
     "karma-jasmine": "^4.0.1",
     "lodash": "^4.17.20",
@@ -24,6 +24,6 @@
     "watchify": "^3.11.1"
   },
   "dependencies": {
-    "kotlin": "^1.4.20"
+    "kotlin": "^1.4.21"
   }
 }
